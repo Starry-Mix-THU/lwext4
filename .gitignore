@@ -9,3 +9,5 @@ ext_images/
 .build-tools.cson
 .gdbinit
 tags
+
+/*.a
