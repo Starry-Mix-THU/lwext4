@@ -43,10 +43,16 @@ else()
       set(BLOCKDEV_TYPE  linux)
     endif()
     set (INSTALL_LIB 1)
-    add_definitions(-DCONFIG_HAVE_OWN_OFLAGS=0)
-    add_definitions(-DCONFIG_HAVE_OWN_ERRNO=0)
-    add_definitions(-DCONFIG_HAVE_OWN_ASSERT=0)
+
+    add_definitions(-DCONFIG_DEBUG_PRINTF=1)
+    add_definitions(-DCONFIG_DEBUG_ASSERT=1)
+
+    add_definitions(-DCONFIG_HAVE_OWN_OFLAGS=1)
+    add_definitions(-DCONFIG_HAVE_OWN_ERRNO=1)
+    add_definitions(-DCONFIG_HAVE_OWN_ASSERT=1)
+    add_definitions(-DCONFIG_USE_USER_MALLOC=1)
     add_definitions(-DCONFIG_BLOCK_DEV_CACHE_SIZE=16)
+
     add_subdirectory(fs_test)
 endif()
 
