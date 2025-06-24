@@ -21,7 +21,7 @@ set(SIZE                ${TOOLCHAIN_PREFIX}-size)
 
 set(LD_FLAGS "-nolibc -nostdlib -static --gc-sections -nostartfiles")
 
-set(CMAKE_C_FLAGS   "-std=gnu99 -fdata-sections -ffunction-sections" CACHE INTERNAL "c compiler flags")
+set(CMAKE_C_FLAGS   "-std=gnu99 -fdata-sections -ffunction-sections $ENV{CFLAGS}" CACHE INTERNAL "c compiler flags")
 set(CMAKE_CXX_FLAGS "-fdata-sections -ffunction-sections" CACHE INTERNAL "cxx compiler flags")
 set(CMAKE_ASM_FLAGS "" CACHE INTERNAL "asm compiler flags")
 

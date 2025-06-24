@@ -21,6 +21,7 @@ COMMON_DEFINITIONS =                                      \
 	-DVERSION=$(VERSION)                                  \
 	-DLWEXT4_BUILD_SHARED_LIB=OFF \
 	-DLWEXT4_ULIBC=$(ULIBC) \
+	-DCMAKE_C_COMPILER_WORKS=1 \
 	-DCMAKE_INSTALL_PREFIX=./install \
 
 define generate_common
